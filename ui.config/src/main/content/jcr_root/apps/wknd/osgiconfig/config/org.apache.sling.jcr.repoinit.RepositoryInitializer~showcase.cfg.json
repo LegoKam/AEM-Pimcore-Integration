@@ -1,0 +1,10 @@
+{
+  "scripts": [
+    "create path (sling:OrderedFolder) /content/dam/breville",
+    "create path (nt:unstructured) /content/dam/breville/jcr:content",
+    "set properties on /content/dam/breville/jcr:content\n  set cq:conf{String} to /conf/wknd\n  set jcr:title{String} to \"Breville\"\nend",
+    "create service user content-svc-admin with path system/wknd",
+    "set ACL for content-svc-admin\n   allow jcr:all on /content/\n end",
+    "set ACL for content-svc-admin\n   allow jcr:all on /conf/\n end"
+  ]
+}
